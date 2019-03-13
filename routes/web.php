@@ -40,3 +40,9 @@ Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload
 
 //CategoriesController
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+
+//RepliesController
+Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+
+//NotificationController
+Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);

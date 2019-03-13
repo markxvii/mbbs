@@ -58,6 +58,16 @@
                 @endcan
             </div>
         </div>
+        {{--回复列表--}}
+        <div class="panel panel-default topic-reply">
+            <div class="panel-body">
+                @if (Auth::check())
+                    @include('topics._reply_box', ['topic' => $topic])
+                @endif
+                @include('topics._reply_list', ['replies' => $topic->replies()->with('user')->get()])
+            </div>
+        </div>
+        {{--回复列表--}}
     </div>
 </div>
 @stop
