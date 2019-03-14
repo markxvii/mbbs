@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\ImageUploadHandler;
 use App\Models\Category;
 use App\Models\Topic;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
@@ -16,7 +17,7 @@ class TopicsController extends Controller
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-	public function index(Request $request)
+	public function index(Request $request,User $user)
 	{
 	    $builder=Topic::query();
 	    // 判断是否有提交 search 参数，如果有就赋值给 $search 变量
@@ -45,8 +46,10 @@ class TopicsController extends Controller
             }
         }
 
+
 		$topics = $builder->with('user','category')->paginate(30);
-		return view('topics.index', compact('topics'));
+        $active_users = $user->getActiveUsers();
+		return view('topics.index', compact('topics','active_users'));
 	}
 
     public function show(Request $request,Topic $topic)

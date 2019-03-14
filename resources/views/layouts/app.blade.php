@@ -9,7 +9,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'MBBS')&nbsp;</title>
-    <meta name="description" content="@yield('description','MBBS，一个开源论坛')"/>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
