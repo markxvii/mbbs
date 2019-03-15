@@ -3,7 +3,13 @@
         <div class="media"  id="reply{{ $reply->id }}">
             <div class="avatar pull-left">
                 <a href="{{ route('users.show', [$reply->user_id]) }}">
-                <img class="media-object img-thumbnail" alt="{{ $reply->user->name }}" src="{{ $reply->user->avatar }}"  style="width:48px;height:48px;"/>
+                    <img class="img-thumbnail media-object" alt="{{ $reply->user->name }}"
+                                 @if ($reply->user->avatar)
+                                     src="{{ $reply->user->avatar }}"
+                                 @else
+                                     src="https://iocaffcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/600/h/600"
+                                 @endif
+                                 style="width:48px;height:48px;"/>
                 </a>
             </div>
 
