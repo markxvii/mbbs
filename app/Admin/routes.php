@@ -26,4 +26,11 @@ Route::group([
     $router->delete('replies/{id}', 'RepliesController@destroy');
     //Category
     $router->get('categories', 'CategoriesController@index');
+    //Link
+    $router->get('links', 'LinksController@index');
+    $router->delete('links/{id}', 'LinksController@destroy');
+    $router->get('links/create', 'LinksController@create');
+    $router->post('links', 'LinksController@store');
+    $router->get('links/{id}/edit', 'LinksController@edit');
+    $router->put('links/{id}', 'LinksController@update');
 });

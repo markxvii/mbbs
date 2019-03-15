@@ -86,6 +86,25 @@ class UsersController extends Controller
         $grid->created_at('注册时间');
         $grid->introduction('个人介绍');
 
+        // 不在页面显示 `新建` 按钮
+        $grid->disableCreateButton();
+
+        $grid->actions(function ($actions) {
+            // 不在每一行后面展示查看按钮
+            $actions->disableView();
+            // 不在每一行后面展示删除按钮
+            $actions->disableDelete();
+            // 不在每一行后面展示编辑按钮
+            $actions->disableEdit();
+        });
+
+        $grid->tools(function ($tools) {
+            // 禁用批量删除按钮
+            $tools->batch(function ($batch) {
+                $batch->disableDelete();
+            });
+        });
+
         return $grid;
     }
 
