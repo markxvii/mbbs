@@ -17,6 +17,8 @@ Route::get('/', 'TopicsController@index')->name('root');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('email_verification', 'EmailVerificationController@verify')->name('email_verification');
+Route::get('send_email_verification', 'EmailVerificationController@send_email')->name('send_email_verification');
 
 // Registration Routes...
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');

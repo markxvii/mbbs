@@ -16,6 +16,7 @@ class TopicsController extends Controller
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware('email_verified', ['except' => ['index', 'show']]);
     }
 
 	public function index(Request $request,User $user,Link $link)

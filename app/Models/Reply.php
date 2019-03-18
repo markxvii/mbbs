@@ -33,7 +33,7 @@ class Reply extends Model
             $topic->increment('reply_count', 1);
 
             //通知作者话题有新的回复
-            $topic->user->notify(new TopicReplied($model));
+            $topic->user->replyNotify($model);
         });
 
         static::deleted(function ($model) {

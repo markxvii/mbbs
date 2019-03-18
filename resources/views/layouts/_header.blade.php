@@ -73,6 +73,13 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+                            @if (!Auth::user()->email_verified)
+                                <li>
+                                <a href="{{ route('send_email_verification') }}">
+                                    验证邮箱
+                                </a>
+                            </li>
+                            @endif
                             <li>
                                 <a href="{{ route('users.show',Auth::id()) }}">
                                     个人中心

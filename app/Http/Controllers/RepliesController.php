@@ -12,6 +12,7 @@ class RepliesController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('email_verified');
     }
 
 	public function store(ReplyRequest $request,Reply $reply)
