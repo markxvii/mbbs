@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2019-03-23 17:04:20.
+    * Generated on 2019-03-23 19:35:52.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -39,6 +39,7 @@ namespace PHPSTORM_META {
         'Illuminate\Notifications\ChannelManager' => \Illuminate\Notifications\ChannelManager::class,
         'Illuminate\Routing\Contracts\ControllerDispatcher' => \Illuminate\Routing\ControllerDispatcher::class,
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
+        'Overtrue\EasySms\EasySms' => \Overtrue\EasySms\EasySms::class,
         'active' => \HieuLe\Active\Active::class,
         'api.auth' => \Dingo\Api\Auth\Auth::class,
         'api.dispatcher' => \Dingo\Api\Dispatcher::class,
@@ -195,6 +196,7 @@ namespace PHPSTORM_META {
         'Illuminate\Notifications\ChannelManager' => \Illuminate\Notifications\ChannelManager::class,
         'Illuminate\Routing\Contracts\ControllerDispatcher' => \Illuminate\Routing\ControllerDispatcher::class,
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
+        'Overtrue\EasySms\EasySms' => \Overtrue\EasySms\EasySms::class,
         'active' => \HieuLe\Active\Active::class,
         'api.auth' => \Dingo\Api\Auth\Auth::class,
         'api.dispatcher' => \Dingo\Api\Dispatcher::class,
@@ -351,6 +353,7 @@ namespace PHPSTORM_META {
         'Illuminate\Notifications\ChannelManager' => \Illuminate\Notifications\ChannelManager::class,
         'Illuminate\Routing\Contracts\ControllerDispatcher' => \Illuminate\Routing\ControllerDispatcher::class,
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
+        'Overtrue\EasySms\EasySms' => \Overtrue\EasySms\EasySms::class,
         'active' => \HieuLe\Active\Active::class,
         'api.auth' => \Dingo\Api\Auth\Auth::class,
         'api.dispatcher' => \Dingo\Api\Dispatcher::class,
@@ -507,6 +510,7 @@ namespace PHPSTORM_META {
         'Illuminate\Notifications\ChannelManager' => \Illuminate\Notifications\ChannelManager::class,
         'Illuminate\Routing\Contracts\ControllerDispatcher' => \Illuminate\Routing\ControllerDispatcher::class,
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
+        'Overtrue\EasySms\EasySms' => \Overtrue\EasySms\EasySms::class,
         'active' => \HieuLe\Active\Active::class,
         'api.auth' => \Dingo\Api\Auth\Auth::class,
         'api.dispatcher' => \Dingo\Api\Dispatcher::class,
@@ -663,6 +667,7 @@ namespace PHPSTORM_META {
         'Illuminate\Notifications\ChannelManager' => \Illuminate\Notifications\ChannelManager::class,
         'Illuminate\Routing\Contracts\ControllerDispatcher' => \Illuminate\Routing\ControllerDispatcher::class,
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
+        'Overtrue\EasySms\EasySms' => \Overtrue\EasySms\EasySms::class,
         'active' => \HieuLe\Active\Active::class,
         'api.auth' => \Dingo\Api\Auth\Auth::class,
         'api.dispatcher' => \Dingo\Api\Dispatcher::class,
@@ -819,6 +824,7 @@ namespace PHPSTORM_META {
         'Illuminate\Notifications\ChannelManager' => \Illuminate\Notifications\ChannelManager::class,
         'Illuminate\Routing\Contracts\ControllerDispatcher' => \Illuminate\Routing\ControllerDispatcher::class,
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
+        'Overtrue\EasySms\EasySms' => \Overtrue\EasySms\EasySms::class,
         'active' => \HieuLe\Active\Active::class,
         'api.auth' => \Dingo\Api\Auth\Auth::class,
         'api.dispatcher' => \Dingo\Api\Dispatcher::class,
@@ -975,6 +981,7 @@ namespace PHPSTORM_META {
         'Illuminate\Notifications\ChannelManager' => \Illuminate\Notifications\ChannelManager::class,
         'Illuminate\Routing\Contracts\ControllerDispatcher' => \Illuminate\Routing\ControllerDispatcher::class,
         'Illuminate\Session\Middleware\StartSession' => \Illuminate\Session\Middleware\StartSession::class,
+        'Overtrue\EasySms\EasySms' => \Overtrue\EasySms\EasySms::class,
         'active' => \HieuLe\Active\Active::class,
         'api.auth' => \Dingo\Api\Auth\Auth::class,
         'api.dispatcher' => \Dingo\Api\Dispatcher::class,
