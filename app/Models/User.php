@@ -5,8 +5,9 @@ namespace App\Models;
 use App\Notifications\TopicReplied;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use Traits\LastActivedAtHelper;
 
@@ -30,7 +31,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','introduction','avatar','email_verified','phone',
+        'name', 'email', 'password','introduction','avatar','email_verified','phone','weixin_openid','weixin_unionid'
     ];
 
     /**
@@ -69,5 +70,25 @@ class User extends Authenticatable
         static::created(function ($model) {
             $model->update(['avatar' => 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200']);
         });
+    }
+
+    /**
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return mixed
+     */
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
+     */
+    public function getJWTCustomClaims()
+    {
+        return [];
     }
 }
