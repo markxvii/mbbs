@@ -17,7 +17,7 @@ $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', [
     'namespace' => 'App\Http\Controllers\Api',
-    'middleware' => ['serializer:array', 'bindings']
+    'middleware' => ['serializer:array', 'bindings','change-locale']
 ], function ($api) {
     $api->group([
         'middleware' => 'api.throttle',
@@ -55,6 +55,18 @@ $api->version('v1', [
         //话题详情
         $api->get('topics/{topic}', 'TopicsController@show')->name('api.topics.show');
 
+        //帖子回复列表
+        $api->get('topics/{topic}/replies', 'RepliesController@index')->name('api.replies.index');
+
+        //用户回复列表
+        $api->get('users/{user}/replies', 'RepliesController@userIndex')->name('api.replies.userIndex');
+
+        // 资源推荐
+        $api->get('links', 'LinksController@index')->name('api.links.index');
+
+        // 活跃用户
+        $api->get('users/actived', 'UsersController@activedIndex')->name('api.users.activedIndex');
+
         //需要携带token才能访问的接口,api.auth为dingo自带的中间件
         $api->group(['middleware' => 'api.auth'], function ($api) {
             //当前登录用户信息
@@ -71,6 +83,19 @@ $api->version('v1', [
             $api->patch('topics/{topic}', 'TopicsController@update')->name('api.topics.update');
             //删除话题
             $api->delete('topics/{topic}', 'TopicsController@destroy')->name('api.topics.destroy');
+
+            //发表回复
+            $api->post('replies', 'RepliesController@store')->name('api.replies.store');
+            //删除回复
+            $api->delete('replies/{reply}', 'RepliesController@destroy')->name('api.replies.destroy');
+
+            //通知列表
+            $api->get('users/notifications', 'NotificationsController@index')->name('api.notifications.index');
+
+            //通知统计
+            $api->get('users/notifications/status', 'NotificationsController@stats')->name('api.notifications.stats');
+            // 标记消息通知为已读
+            $api->patch('users/notifications', 'NotificationsController@read')->name('api.notifications.read');
         });
     });
 });

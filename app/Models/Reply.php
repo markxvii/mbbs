@@ -6,7 +6,7 @@ use App\Notifications\TopicReplied;
 
 class Reply extends Model
 {
-    protected $fillable = ['content'];
+    protected $fillable = ['content','topic_id','user_id'];
 
     public function topic()
     {
